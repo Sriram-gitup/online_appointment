@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Doctor Appointment Booking</h1>
+        </header>
+
+        <div class="form-container">
+            <form id="appointment-form">
+                <label for="patient-name">Full Name:</label>
+                <input type="text" id="patient-name" name="name" placeholder="Enter your full name" required>
+
+                <label for="doctor">Select Doctor:</label>
+                <select id="doctor" name="doctor" required>
+                    <option value="">Select a doctor</option>
+                    <option value="Dr. Smith">Dr. Smith - Cardiologist</option>
+                    <option value="Dr. Johnson">Dr. Johnson - Neurologist</option>
+                    <option value="Dr. Williams">Dr. Williams - Dermatologist</option>
+                    <option value="Dr. Brown">Dr. Brown - Pediatrician</option>
+                </select>
+
+                <label for="appointment-date">Select Date:</label>
+                <input type="date" id="appointment-date" name="date" required>
+
+                <label for="appointment-time">Select Time:</label>
+                <select id="appointment-time" name="time" required>
+                    <option value="">Select time</option>
+                    <option value="9:00 AM">9:00 AM</option>
+                    <option value="10:00 AM">10:00 AM</option>
+                    <option value="11:00 AM">11:00 AM</option>
+                    <option value="1:00 PM">1:00 PM</option>
+                    <option value="2:00 PM">2:00 PM</option>
+                </select>
+
+                <button type="submit" class="submit-btn">Book Appointment</button>
+            </form>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Doctor Appointment Booking System</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('appointment-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert("Your appointment has been booked!");
+        });
+    </script>
+</body>
+</html>
